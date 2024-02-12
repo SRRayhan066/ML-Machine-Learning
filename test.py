@@ -36,3 +36,9 @@ imputer = SimpleImputer(missing_values=np.nan, strategy='most_frequent')
 imputer.fit(XXX.iloc[:,1:3])
 XXX.iloc[:,1:3] = imputer.transform(XXX.iloc[:,1:3])
 
+
+#Using labelencoder for transferring string value to numarical value
+from sklearn.preprocessing import LabelEncoder
+labelEncoder_X = LabelEncoder()
+X.iloc[:,0] = labelEncoder_X.fit_transform(X.iloc[:,0])
+

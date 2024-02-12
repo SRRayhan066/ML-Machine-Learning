@@ -19,3 +19,10 @@ Based on mode-
 ```
 imputer = SimpleImputer(missing_values=np.nan, strategy='most_frequent')
 ```
+
+For transfarring string value to numerical value-
+```
+from sklearn.preprocessing import LabelEncoder
+labelEncoder_X = LabelEncoder()
+X.iloc[:,0] = labelEncoder_X.fit_transform(X.iloc[:,0])
+```
